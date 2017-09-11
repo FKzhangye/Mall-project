@@ -1,0 +1,94 @@
+body{
+	background: #fee;
+}
+
+#sign-in{
+	width: 400px;
+	height: 420px;
+	font-size: 18px;
+	color: black;
+	background-image: url(../img/register.gif);
+	margin:0 auto;
+	margin-top: 70px;
+}
+.sign{
+	width: 400px;
+	height: 40px;
+	font-size: 28px;
+	color: cyan;
+	font-weight: 600;
+	text-align: center;
+	line-height: 70px;
+}
+.username,.password,.verification{
+	width: 320px;
+	height: 43px;
+	background: #eee;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 30px;
+	margin-bottom: 0;
+	padding-left: 4px;
+}
+.username input,.password input,.verification input{
+	width: 200px;
+	height: 25px;
+	font-size: 18px;
+	line-height: 25px;
+	margin: 5px 10px;
+}
+#sign-in button{
+	width: 322px;
+	height: 43px;
+	background: #eee;
+	font-size: 20px;
+	line-height: 40px;
+	margin: 0 30px;
+}
+#sign-in button:hover{
+	color: green;
+	font-size: 22px;
+	background: whitesmoke;
+	font-weight: 600;
+}
+#sign-in .error{
+	background: white;
+	font-size: 15px;
+	color: red;
+	display: none;
+}
+
+.iagree{
+	width: 320px;
+	height: 30px;
+	background: #eee;
+	font-size: 18px;
+	line-height: 30px;
+	padding-left: 5px;
+	margin: 30px;
+}
+.iagree a{
+	text-decoration: none;
+}
+.iagree a:hover{
+	text-decoration: underline;
+}
+
+#imgss{
+	width: 80px;
+	height: 300px;
+	position: fixed;
+	top: 130px;
+	right: 200px;
+}
+#imgss img{
+	width: 80px;
+	height: 30px;
+}
+#imgss div{
+	width: 22px;
+	font-size: 22px;
+	color: green;
+	float: left;
+	margin: 8px;
+}

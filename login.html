@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="{CHARSET}">
-		<title>登录</title>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="styles/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/register.css"/>
 	</head>
 	<body>
+			<!--sign-in 用户注册-->
+			<div id="sign-in">
+				<div class="sign">用户注册</div>
+				<div class="username">
+					<span>用户注册:</span>
+					<input type="text" name="username" placeholder="请输入用户名">
+					<span class="error" calss="" id="errorUsername">用户名不合法，请填写3-20位的英文数字下划线</span>
+				</div>
+				<div class="password">
+					<span>设置密码:</span>
+			  		<input type="password" name="password" placeholder="请输入密码">
+					<span class="error" class="" id="errorPassworld">密码最小长度为6位</span>
+				</div>
+				<div class="iagree">
+					<input type="checkbox" id="agree" checked="checked"/>
+					<label for="agree" style="margin-left:10px">我已阅读并同意
+						<a href="http://www.iliangcang.com/i/our/service">良仓注册条款</a>
+					</label>
+				</div>
+			  	<button>立即登录</button>
+			  	
+			  	<script type="text/javascript" src="js/myajax.js"></script>
+			  	<script type="text/javascript" src="js/register.js"></script>
+			</div>
 	</body>
 </html>
