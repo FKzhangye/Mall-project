@@ -1,0 +1,14 @@
+#content table{
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+#content table,td{
+  border: 1px solid orange;
+  padding: 10px;
+  vertical-align: middle;
+}
+#content table img{
+  border-radius: 50%;
+  width: 100px;
+}
