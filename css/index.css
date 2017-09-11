@@ -1,0 +1,165 @@
+body {
+  margin: auto;
+  width: 1065px;
+  /*height: 5000px;*/
+}
+
+
+/*头部样式*/
+
+#header {
+  height: 100px;
+  background: oldlace;
+  margin-bottom: 10px;
+}
+
+#header .logo {
+  height: 100px;
+  float: left;
+}
+
+.logo img {
+  height: 80px;
+  margin: 10px;
+}
+
+#header .register,
+.login {
+  float: left;
+  line-height: 80px;
+  margin-left: 30px;
+}
+.username, .logout{
+  display: none;
+}
+#header .register a,
+.login a,
+.order a,
+.cart a {
+  padding: 8px;
+  background: orange;
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+#header .order,
+.cart {
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+}
+
+#header .register a:hover,
+.login a:hover,
+.order a:hover,
+.cart a:hover {
+  background: white;
+  color: orange;
+}
+
+
+/*导航部分样式*/
+
+#nav {
+  width: 1065px;
+  height: 50px;
+  margin: auto;
+  background: orange;
+  z-index: 99999;
+}
+
+#cat {
+  float: left;
+  line-height: 30px;
+}
+
+#cat li {
+  float: left;
+  margin: 10px;
+  list-style: none;
+}
+
+#cat a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  background: orange;
+  border-radius: 5px;
+}
+
+#cat a:hover {
+  color: orange;
+  background: white;
+}
+
+#search {
+  margin: 10px;
+  width: 250px;
+  height: 30px;
+  float: right;
+  border-style: none;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+
+/*內容部分样式*/
+
+#content {
+  height: 700px;
+  width: 1065px;
+  margin: 10px 0;
+  /*background: powderblue;*/
+}
+
+#content p {
+  height: 30px;
+  width: 1069px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 22px;
+  margin: 10px 0;
+}
+#hot-goods{
+  width: 1069px;
+  
+}
+.goods{
+  float: left;
+  margin: 0 0px 15px 10px;
+  width: 200px;
+  height: 320px;
+  box-sizing: border-box;
+  
+}
+.goods a{
+  text-decoration: none;
+  color: black;
+}
+.goods:hover{
+  border: 1px solid orange;
+    
+}
+.goods:hover img{
+  opacity: 0.5;
+}
+.img img{
+  width: 100%;
+  height: 100%;
+}
+.name{
+  margin-top: 5px;
+  height: 90px;
+  padding: 0 10px;
+  line-height: 20px;
+}
+.name:hover{
+  text-decoration: underline;
+}
+.price{
+  padding: 0 10px;
+  color: orange;
+}
