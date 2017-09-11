@@ -8,12 +8,14 @@
     <!--回到顶部-->    
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
+   	<!-- 登录-->
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
     
-    
-    <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
-
+  	<!--myajax-->
+		<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+		
     <!--页面头部-->
     <div id="header">
       <div id="head">
@@ -80,7 +82,33 @@
     
     <!--内容区域-->
     <div id="content">
-      
+      <div id="sign-in">
+			<div class="sign">用户注册</div>
+				<div class="sign11">
+					<span>用户注册:</span>
+					<input type="text" name="username" placeholder="请输入用户名">
+					<span class="error" calss="" id="errorUsername">用户名不合法，请填写3-20位的英文数字下划线</span>
+				</div>
+				<div class="password">
+					<span>设置密码:</span>
+			  		<input type="password" name="password" placeholder="请输入密码">
+					<span class="error" class="" id="errorPassworld">密码最小长度为6位</span>
+				</div>
+				<div class="verification">
+					<span>密码验证:</span>
+			  		<input class="verify" type="password" name="verify" placeholder="请重新输入密码">
+					<span class="error"class="" id="errorVerification">密码验证错误</span>
+				</div>
+				<div class="iagree">
+					<input type="checkbox" id="agree" checked="checked"/>
+					<label for="agree" style="margin-left:10px">我已阅读并同意
+						<a href="http://www.iliangcang.com/i/our/service">淘抢购注册条款</a>
+					</label>
+				</div>
+			  	<button>立即注册</button>
+			  	
+			  	<script type="text/javascript" src="js/register.js"></script>
+			</div>
     </div>
     <!--页面底部-->
     <div id="footer">
@@ -208,6 +236,7 @@
     </script>
     <!--吸顶-->
     <script src="js/onTop.js" type="text/javascript" charset="utf-8"></script>
+
     
   </body>
 

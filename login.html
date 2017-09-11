@@ -8,11 +8,12 @@
     <!--回到顶部-->    
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
     
-    
-    <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
+  	<!--myajax-->
+		<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
 
     <!--页面头部-->
     <div id="header">
@@ -75,12 +76,31 @@
         }
       });
     </script>
-    <!--页面内容-->
-    <!--轮播-->
     
     <!--内容区域-->
     <div id="content">
-      
+      <div id="sign-in">
+			<div class="sign">用户登录</div>
+				<div class="sign11">
+					<span>用户登录:</span>
+					<input type="text" name="username" placeholder="请输入用户名">
+					<span class="error" calss="" id="errorUsername">用户名不合法，请填写3-20位的英文数字下划线</span>
+				</div>
+				<div class="verification">
+					<span>密码验证:</span>
+			  		<input class="verify" type="password" name="verify" placeholder="请重新输入密码">
+					<span class="error"class="" id="errorVerification">密码验证错误</span>
+				</div>
+				<div class="iagree">
+					<input type="checkbox" id="agree" checked="checked"/>
+					<label for="agree" style="margin-left:10px">我已阅读并同意
+						<a href="http://www.iliangcang.com/i/our/service">淘抢购注册条款</a>
+					</label>
+				</div>
+			  	<button>立即登录</button>
+					<script type="text/javascript" src = "js/login.js"></script>
+			  	
+			</div>
     </div>
     <!--页面底部-->
     <div id="footer">
@@ -208,7 +228,6 @@
     </script>
     <!--吸顶-->
     <script src="js/onTop.js" type="text/javascript" charset="utf-8"></script>
-    
   </body>
 
 </html>
