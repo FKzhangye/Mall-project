@@ -1,15 +1,11 @@
-body{
-	background: #fee;
-}
 
 #sign-in{
 	width: 400px;
 	height: 420px;
 	font-size: 18px;
 	color: black;
-	background-image: url(../img/register.gif);
-	margin:0 auto;
-	margin-top: 70px;
+	background-image: url(../images/register.gif);
+	margin:40px auto;
 }
 .sign{
 	width: 400px;
@@ -20,7 +16,7 @@ body{
 	text-align: center;
 	line-height: 70px;
 }
-.username,.password,.verification{
+.sign11,.password,.verification{
 	width: 320px;
 	height: 43px;
 	background: #eee;
@@ -30,8 +26,8 @@ body{
 	margin-bottom: 0;
 	padding-left: 4px;
 }
-.username input,.password input,.verification input{
-	width: 200px;
+.sign11 input,.password input,.verification input{
+	width: 180px;
 	height: 25px;
 	font-size: 18px;
 	line-height: 25px;
@@ -69,6 +65,7 @@ body{
 }
 .iagree a{
 	text-decoration: none;
+	color: blue;
 }
 .iagree a:hover{
 	text-decoration: underline;

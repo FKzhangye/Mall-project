@@ -25,6 +25,7 @@ oVerify.onblur = function(){
 }
 
 oButton.onclick = function(){
+	
     //先进行js校验用户名和密码符合规范，js校验通过
     //请求ajax进行校验用户名是否可用,当这个校验通过，就可以请求注册接口
       myajax.post('http://h6.duchengjiu.top/shop/api_user.php',
@@ -36,4 +37,11 @@ oButton.onclick = function(){
       var json = JSON.parse(responseText);
       alert(json.message);
     });
-  }
+    /*//如果localstorage里面有backurl,我们就跳过去, 否则跳回首页
+        //登录成功后，跳转至首页
+        if (localStorage.backurl) {
+          location.href = localStorage.backurl;
+        } else {
+          location.href = 'login.html';
+        }*/
+}

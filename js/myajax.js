@@ -44,7 +44,6 @@
     if (window.XMLHttpRequest) {
       var xhr = new XMLHttpRequest();//高级浏览器
     } else {
-    	////IE older
       var xhr = new ActiveXObject('Microsoft.XMLHTTP');
     }
     //结果返回之后要做的事情
@@ -84,10 +83,52 @@ function getQueryString(name) {
   var search = location.search.substr(1);
   //abc=123&a=&ccc=abc
   //(^|&)开始或用&链接     (&|$)结束或用&链接
+  //(^|&)   (&|$)
   //abc=([^&]*)
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
   var result = search.match(reg);
   // if (result === null) return null;
   // return decodeURIComponent(result[2]);
   return result === null ? null : decodeURIComponent(result[2]);
+}
+
+//表单序列化
+function serializeForm(oForm) {
+  //得到所有的元素
+  var elems = oForm.elements;
+  var arr = {};
+  for (var i = 0; i < elems.length; i++) {
+    //当前遍历的小元素
+    var e = elems[i];
+    //分类讨论
+    switch(e.type) {
+      //如果控件的类型是按钮，那么没有任何返回值
+      case 'button':
+      case 'submit':
+      case 'reset':
+        break;
+      //如果是文本框，得到value
+      case 'text':
+      case 'password':
+      case 'textarea':
+        arr[e.name] = e.value;
+        break;
+      //如果是单选或复选
+      case 'radio':
+      case 'checkbox':
+        if (e.checked) {
+          arr[e.name] = e.value;
+        }
+        break;
+      case "select-one":
+        var options = e.querySelectorAll('option');
+        for (var j = 0; j < options.length; j++) {
+          if (options[j].selected) {
+            arr[e.name] = options[j].value;
+          }
+        }
+        break;
+    }
+  }
+  return arr;
 }
