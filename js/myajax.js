@@ -17,6 +17,7 @@
     }
     //结果返回之后要做的事情
     xhr.onreadystatechange = function() {
+    	//xhr.DONE请求完成，响应就绪
       if (xhr.readyState === xhr.DONE) {
         //status是http的响应状态码 2开头的都是没问题，304表示没有修改
         if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
@@ -41,7 +42,7 @@
   myajax.post = function(URL, queryJSON, callback) {
     //创建xhr对象，解决兼容性问题
     if (window.XMLHttpRequest) {
-      var xhr = new XMLHttpRequest();
+      var xhr = new XMLHttpRequest();//高级浏览器
     } else {
       var xhr = new ActiveXObject('Microsoft.XMLHTTP');
     }
@@ -81,6 +82,7 @@
 function getQueryString(name) {
   var search = location.search.substr(1);
   //abc=123&a=&ccc=abc
+  //(^|&)开始或用&链接     (&|$)结束或用&链接
   //(^|&)   (&|$)
   //abc=([^&]*)
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");

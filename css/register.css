@@ -4,8 +4,13 @@
 	height: 420px;
 	font-size: 18px;
 	color: black;
+<<<<<<< HEAD
 	background:orchid;
 	margin:auto;
+=======
+	background-image: url(../images/register.gif);
+	margin:40px auto;
+>>>>>>> 474e1294e17fd2954abed1f458b01a615642d915
 }
 .sign{
 	width: 400px;
@@ -19,6 +24,10 @@
 .sign11,.password,.verification{
 	width: 320px;
 	height: 43px;
+<<<<<<< HEAD
+=======
+	background: #eee;
+>>>>>>> 474e1294e17fd2954abed1f458b01a615642d915
 	font-size: 20px;
 	line-height: 40px;
 	margin: 30px;
@@ -31,7 +40,10 @@
 	font-size: 18px;
 	line-height: 25px;
 	margin: 5px 10px;
+<<<<<<< HEAD
 	border-style: none;
+=======
+>>>>>>> 474e1294e17fd2954abed1f458b01a615642d915
 }
 #sign-in button{
 	width: 322px;
@@ -57,6 +69,10 @@
 .iagree{
 	width: 320px;
 	height: 30px;
+<<<<<<< HEAD
+=======
+	background: #eee;
+>>>>>>> 474e1294e17fd2954abed1f458b01a615642d915
 	font-size: 18px;
 	line-height: 30px;
 	padding-left: 5px;
