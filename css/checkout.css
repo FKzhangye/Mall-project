@@ -1,10 +1,11 @@
-main{
+main {
 	width: 1063px;
 	background: beige;
-	margin:50px auto;
+	margin: 50px auto;
 	overflow: hidden;
 }
-.shop_address{
+
+.shop_address {
 	width: 100px;
 	height: 35px;
 	line-height: 40px;
@@ -13,7 +14,8 @@ main{
 	float: left;
 	margin: 10px;
 }
-#add-address{
+
+#add-address {
 	width: 100px;
 	height: 30px;
 	font-size: 15px;
@@ -24,10 +26,12 @@ main{
 	background: orange;
 	color: white;
 }
-#address-ul{
+
+#address-ul {
 	height: 150px;
 }
-.address li{
+
+.address li {
 	width: 238px;
 	height: 120px;
 	background: orchid;
@@ -40,10 +44,10 @@ main{
 }
 
 .address-ul li.selected {
-    border: 2px solid white;
+	border: 2px solid white;
 }
 
-.address .delete{
+.address .delete {
 	width: 50px;
 	height: 30px;
 	background: orange;
@@ -56,26 +60,29 @@ main{
 	top: 0px;
 	right: 0px;
 }
-.address .delete:hover{
+
+.address .delete:hover {
 	background: white;
 	color: orange;
 	border: 2px solid orange;
 }
 
-
-.address li div{
+.address li div {
 	width: 230px;
 	height: 20px;
 	color: black;
 	font-size: 15px;
 	margin: 12px;
 }
-#show-all-address-order{
+
+#show-all-address-order {
 	width: 1063px;
 	height: 60px;
 	clear: both;
 }
-.show-all-address,.order{
+
+.show-all-address,
+.order {
 	width: 90px;
 	height: 30px;
 	background: orange;
@@ -86,17 +93,21 @@ main{
 	border-radius: 5px;
 	margin: 10px;
 }
-.show-all-address{
+
+.show-all-address {
 	float: left;
 }
-.order{
+
+.order {
 	width: 50px;
 	height: 30px;
 	float: right;
 }
-#add-address:hover,.show-all-address:hover,.order:hover{
+
+#add-address:hover,
+.show-all-address:hover,
+.order:hover {
 	background: white;
 	color: orange;
 	border: 2px solid orange;
 }
-
