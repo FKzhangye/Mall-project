@@ -1,0 +1,49 @@
+#order{
+  width: 1069px;
+}
+#order li {
+  border: 1px solid orange;
+  float: left;
+  margin:10px;
+  width: 510px;
+}
+
+#order li div.title {
+  background-color: oldlace;
+  line-height: 30px;
+  padding: 5px;
+  border-bottom: 1px solid orange;
+}
+
+#order li div.order-goods {
+  background-color: oldlace;
+}
+
+#order li div.order-goods div {
+  float: left;
+  height: 120px;
+  line-height: 120px;
+  margin-left: 10px;
+}
+
+#order li div.order-goods div img {
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.cancel-order {
+  float: right;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  
+}
+
+.cancel-order:hover {
+  background-color: white;
+  color: orange;
+}
