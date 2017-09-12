@@ -14,13 +14,14 @@ myajax.get('http://h6.duchengjiu.top/shop/api_cart.php', {
                             <td name="goods_id">${obj.goods_id}</td>
                             <td><img src="${obj.goods_thumb}" ></td>
                             <td>${obj.goods_name}</td>
-                            <td><input data-id="${obj.goods_id}" type="number" name="number" min="1" max="10" value="${obj.goods_number}" /></td>
+                            <td class='number'><input data-id="${obj.goods_id}" type="number" name="number" min="1" max="10" value="${obj.goods_number}" /></td>
                             <td>￥ ${obj.goods_price} 元</td>
                             <td name="sum">￥ ${obj.goods_sum} 元</td>
-                            <td><input data-id="${obj.goods_id}" type="button" name="delete" value="删除"></td>
+                            <td class='cartInput'><input data-id="${obj.goods_id}" type="button" name="delete" value="删除"></td>
                           </tr>
                           `;
   }
+
   getSum();
 });
 
@@ -46,6 +47,7 @@ oTable.onchange = function(event) {
           target.parentNode.nextElementSibling.nextElementSibling.innerText = parseInt(target.value) * goods_price;
           getSum();
         }
+        
       });
   }
 }
