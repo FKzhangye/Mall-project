@@ -3,7 +3,7 @@ function Modal(selector) {
   this.windowHeight = document.body.clientHeight || document.documentElement.clientHeight;
   this.oContainer = document.querySelector('.container');
   this.containerHeight = this.oContainer.clientHeight;
-  this.oContainer.style.top = (this.windowHeight - this.containerHeight) / 2 + 'px';
+//this.oContainer.style.top = (this.windowHeight - this.containerHeight) / 2 + 'px';
   this.oModal = document.querySelector('.modal');
   this.oBtn = document.querySelector(selector);
   this.bindEvent();

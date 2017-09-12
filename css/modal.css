@@ -1,15 +1,16 @@
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 .modal .container {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 30%;
+  top: 20%;
   width: 500px;
   margin: 0 auto;
   background-color: white;
@@ -35,3 +36,12 @@
 .modal .container .bd {
   padding: 10px;
 }
+ form {
+      padding-right: 150px;
+    }
+    label {
+      display: block;
+      text-align: right;
+      margin-bottom: 5px;
+    }
+
