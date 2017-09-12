@@ -96,7 +96,6 @@ oAdd.onclick = function() {
 }
 
 //下订单
-
 var oOrder = document.querySelector('#order');
 oOrder.onclick = function() {
 	var address_id = selected_address_id;
