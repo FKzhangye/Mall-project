@@ -21,6 +21,7 @@ Modal.prototype.bindEvent = function() {
     this.show();
   }
 }
+
 Modal.prototype.hide = function() {
     this.oModal.style.display = 'none';
 }
