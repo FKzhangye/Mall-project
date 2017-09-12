@@ -8,12 +8,12 @@
     <!--回到顶部-->    
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    
-    
-    <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="css/checkout.css"/>
+    <link rel="stylesheet" type="text/css" href="css/modal.css"/>
   </head>
   <body>
-
+    <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+		
     <!--页面头部-->
     <div id="header">
       <div id="head">
@@ -79,9 +79,91 @@
     <!--轮播-->
     
     <!--内容区域-->
+    <!--收货地址-->
     <div id="content">
-      
+    	<main>
+    		<div class="shop_address" id=="shop_address">收货地址 </div>
+    		<input type="button" id="add-address" class="addRess" value="添加收货地址" />
+    		<div class="address" id="address">
+    			<ul id="address-ul" class="address-ul">
+    				<!--<li>
+    					<div>收货人：电脑 </div>
+    					<div>手机：22222 </div>
+    					<div>地址： 你哦解放到济南局据当年吃的晚微服务</div>
+            	<div name="delete" class="delete">删除</div>
+    					
+    				</li>
+    				<li>
+    					<div>收货人：电脑 </div>
+    					<div>手机：22222 </div>
+    					<div>地址： 你哦解放到济南局据当年吃的晚微服务</div>
+    				</li>-->
+    			</ul>
+    			<div id="show-all-address-order">
+    				<div class="show-all-address" id="show-all-address">显示全部地址</div>
+    				<div class="order" id="order">下订单</div>
+    			</div>
+    		</div>
+    	</main>
+    	
+    	<!--添加收货地址页-->
+    	<div class="modal register">
+		    <div class="container">
+		      <div class="hd">添加收货地址<span class="close">关闭</span></div>
+		      <div class="bd">
+		        <form>
+		          <label>
+		            地址名称: <input type="text" name="address_name" value="家">
+		          </label>
+		          <label>
+		            收货人: <input type="text" name="consignee" value="maxwelldu">
+		          </label>
+		          <label>
+		            国家: <input type="text" name="country" value="中国">
+		          </label>
+		          <label>
+		            省: <input type="text" name="province" value="北京">
+		          </label>
+		          <label>
+		            市: <input type="text" name="city" value="北京">
+		          </label>
+		          <label>
+		            区: <input type="text" name="district" value="石景山">
+		          </label>
+		          <label>
+		            地址: <input type="text" name="address" value="实兴东街11号朗诚大厦南楼二层">
+		          </label>
+		          <label>
+		            邮编: <input type="text" name="zip_code" value="100000">
+		          </label>
+		          <label>
+		            手机号: <input type="text" name="mobile" value="18518368050">
+		          </label>
+		          <label>
+		            邮箱: <input type="text" name="email" value="dcj3sjt@126.com">
+		          </label>
+		          <label>
+		            电话: <input type="text" name="tel" value="010-91519281">
+		          </label>
+		          <label>
+		            最佳送货时间: <input type="text" name="besttime" value="周一到周五">
+		          </label>
+		          <label>
+		            标志物: <input type="text" name="sign_building" value="">
+		          </label>
+		          <label>
+		            <input type="button" value="添加" class="add">
+		          </label>
+		        </form>
+		      </div>
+		    </div>
+		  </div>
     </div>
+    <script type="text/javascript" src="js/animate-2.0.1.js" charset="utf-8"></script>
+  	<script src="js/modal.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/checkout.js" charset="utf-8"></script> 
+
+   
     <!--页面底部-->
     <div id="footer">
       <div class="footer-01">

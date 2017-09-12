@@ -1,0 +1,102 @@
+main{
+	width: 1063px;
+	background: beige;
+	margin:50px auto;
+	overflow: hidden;
+}
+.shop_address{
+	width: 100px;
+	height: 35px;
+	line-height: 40px;
+	font-size: 18px;
+	color: black;
+	float: left;
+	margin: 10px;
+}
+#add-address{
+	width: 100px;
+	height: 30px;
+	font-size: 15px;
+	line-height: 30px;
+	border-radius: 5px;
+	border: none;
+	margin: 14px;
+	background: orange;
+	color: white;
+}
+#address-ul{
+	height: 150px;
+}
+.address li{
+	width: 238px;
+	height: 120px;
+	background: orchid;
+	float: left;
+	margin: 10px;
+	overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+	border: 2px solid orchid;
+}
+
+.address-ul li.selected {
+    border: 2px solid white;
+}
+
+.address .delete{
+	width: 50px;
+	height: 30px;
+	background: orange;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.address .delete:hover{
+	background: white;
+	color: orange;
+	border: 2px solid orange;
+}
+
+
+.address li div{
+	width: 230px;
+	height: 20px;
+	color: black;
+	font-size: 15px;
+	margin: 12px;
+}
+#show-all-address-order{
+	width: 1063px;
+	height: 60px;
+	clear: both;
+}
+.show-all-address,.order{
+	width: 90px;
+	height: 30px;
+	background: orange;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+	margin: 10px;
+}
+.show-all-address{
+	float: left;
+}
+.order{
+	width: 50px;
+	height: 30px;
+	float: right;
+}
+#add-address:hover,.show-all-address:hover,.order:hover{
+	background: white;
+	color: orange;
+	border: 2px solid orange;
+}
+
