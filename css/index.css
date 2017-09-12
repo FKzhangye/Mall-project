@@ -93,7 +93,7 @@ body {
   width: 1065px;
   margin: 10px 0;
 }
-#content ul{
+#content ul,#cats{
   overflow: hidden;
 }
 #content p {
@@ -106,8 +106,20 @@ body {
 }
 #hot-goods{
   width: 1069px;
-  
+  overflow: hidden;
+  margin: auto;
 }
+#oError {
+      width: 350px;
+      height: 30px;
+      font-size: 22px;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 10px;
+      margin:50px auto;
+      background-color: orange;
+      color: white;
+    }
 .goods{
   float: left;
   margin: 0 0px 15px 10px;
@@ -133,8 +145,10 @@ body {
 }
 .name{
   margin-top: 5px;
-  height: 90px;
+  height: 85px;
   padding: 0 10px;
+  overflow: hidden;
+  font-size: 15px;
   line-height: 20px;
 }
 .name:hover{
@@ -142,7 +156,14 @@ body {
 }
 .price{
   padding: 0 10px;
+  font-size: 22px;
   color: orange;
+  float: left;
+}
+.goods i{
+	font-size: 15px;
+	color: orange;
+	line-height: 23px;
 }
 #footer {
   width: 1025px;
