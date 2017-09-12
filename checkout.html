@@ -1,92 +1,93 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>下订单</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <!--回到顶部-->    
-    <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <link rel="stylesheet" type="text/css" href="css/checkout.css"/>
-    <link rel="stylesheet" type="text/css" href="css/modal.css"/>
-  </head>
-  <body>
-    <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
-		
-    <!--页面头部-->
-    <div id="header">
-      <div id="head">
-        <div class="logo">
-          <a href="index.html"><img src="images/logo.png" /></a>
-        </div>
-        <div class="lest">
-          <a href="login.html" name="login" class="login">登录</a>
-          <a href="#" name="username" class="username">yangliang</a>
-          <a href="javascript:localStorage.clear(); location.reload();" class="logout">退出</a>
+	<head>
+		<meta charset="UTF-8">
+		<title>下订单</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<!--回到顶部-->
+		<link rel="stylesheet" type="text/css" href="css/backtotop.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/checkout.css" />
+		<link rel="stylesheet" type="text/css" href="css/modal.css" />
+	</head>
 
-          <a href="register.html" name="register" class="register">注册</a>
+	<body>
+		<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
 
-          <a href="cart.html">购物车</a>
+		<!--页面头部-->
+		<div id="header">
+			<div id="head">
+				<div class="logo">
+					<a href="index.html"><img src="images/logo.png" /></a>
+				</div>
+				<div class="lest">
+					<a href="login.html" name="login" class="login">登录</a>
+					<a href="#" name="username" class="username">yangliang</a>
+					<a href="javascript:localStorage.clear(); location.reload();" class="logout">退出</a>
 
-          <a href="order.html">我的订单</a>
-          <a href="index.html">返回首頁</a>
-          
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript">
-      if(localStorage.username){
-        var oUsername = document.querySelector('a[name=username]');
-        var oLogout = document.querySelector('.logout');
-        oUsername.innerText = localStorage.username;
-        oUsername.style.display = 'inline';
-        oLogout.style.display = 'inline';
-      } else {
-        var oRegister = document.querySelector('.register');
-        var oLogin = document.querySelector('.login');
-        oRegister.style.display = 'inline';
-        oLogin.style.display = 'inline';
-      }
-    </script>
-    <!--页面导航-->
+					<a href="register.html" name="register" class="register">注册</a>
 
-    <div id="nav">
-      <input type="text" id="search" placeholder="请输入搜索内容内容" />
-      <ul id="cat"></ul>
-    </div>
-    <!--页面导航-->    
-    <script type="text/javascript">
-      var oSearch = document.querySelector('#search');
-      oSearch.onkeyup = function(event){
-        if (event.keyCode === 13) {
-          location.href = 'search.html?search_text='+this.value;
-        }
-      }
-    </script>
-    <script type="text/javascript">
-      var oCat = document.querySelector('#cat');
-      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText){
-        var json = JSON.parse(responseText);
-        var data = json.data;
-        for (var i = 0; i < data.length; i++) {
-          var obj = data[i];
-          oCat.innerHTML += `<li><a href='list.html?cat_id=${obj.cat_id}'>${obj.cat_name}</a></li>`
-        }
-      });
-    </script>
-    <!--页面内容-->
-    <!--轮播-->
-    
-    <!--内容区域-->
-    <!--收货地址-->
-    <div id="content">
-    	<main>
-    		<div class="shop_address" id=="shop_address">收货地址 </div>
-    		<input type="button" id="add-address" class="addRess" value="添加收货地址" />
-    		<div class="address" id="address">
-    			<ul id="address-ul" class="address-ul">
-    				<!--<li>
+					<a href="cart.html">购物车</a>
+
+					<a href="order.html">我的订单</a>
+					<a href="index.html">返回首頁</a>
+
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			if(localStorage.username) {
+				var oUsername = document.querySelector('a[name=username]');
+				var oLogout = document.querySelector('.logout');
+				oUsername.innerText = localStorage.username;
+				oUsername.style.display = 'inline';
+				oLogout.style.display = 'inline';
+			} else {
+				var oRegister = document.querySelector('.register');
+				var oLogin = document.querySelector('.login');
+				oRegister.style.display = 'inline';
+				oLogin.style.display = 'inline';
+			}
+		</script>
+		<!--页面导航-->
+
+		<div id="nav">
+			<input type="text" id="search" placeholder="请输入搜索内容内容" />
+			<ul id="cat"></ul>
+		</div>
+		<!--页面导航-->
+		<script type="text/javascript">
+			var oSearch = document.querySelector('#search');
+			oSearch.onkeyup = function(event) {
+				if(event.keyCode === 13) {
+					location.href = 'search.html?search_text=' + this.value;
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			var oCat = document.querySelector('#cat');
+			myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText) {
+				var json = JSON.parse(responseText);
+				var data = json.data;
+				for(var i = 0; i < data.length; i++) {
+					var obj = data[i];
+					oCat.innerHTML += `<li><a href='list.html?cat_id=${obj.cat_id}'>${obj.cat_name}</a></li>`
+				}
+			});
+		</script>
+		<!--页面内容-->
+		<!--轮播-->
+
+		<!--内容区域-->
+		<!--收货地址-->
+		<div id="content">
+			<main>
+				<div class="shop_address" id=="shop_address">收货地址 </div>
+				<input type="button" id="add-address" class="addRess" value="添加收货地址" />
+				<div class="address" id="address">
+					<ul id="address-ul" class="address-ul">
+						<!--<li>
     					<div>收货人：电脑 </div>
     					<div>手机：22222 </div>
     					<div>地址： 你哦解放到济南局据当年吃的晚微服务</div>
@@ -98,199 +99,198 @@
     					<div>手机：22222 </div>
     					<div>地址： 你哦解放到济南局据当年吃的晚微服务</div>
     				</li>-->
-    			</ul>
-    			<div id="show-all-address-order">
-    				<div class="show-all-address" id="show-all-address">显示全部地址</div>
-    				<div class="order" id="order">下订单</div>
-    			</div>
-    		</div>
-    	</main>
-    	
-    	<!--添加收货地址页-->
-    	<div class="modal register">
-		    <div class="container">
-		      <div class="hd">添加收货地址<span class="close">关闭</span></div>
-		      <div class="bd">
-		        <form>
-		          <label>
-		            地址名称: <input type="text" name="address_name" value="家">
+					</ul>
+					<div id="show-all-address-order">
+						<div class="show-all-address" id="show-all-address">显示全部地址</div>
+						<div class="order" id="order">下订单</div>
+					</div>
+				</div>
+			</main>
+
+			<!--添加收货地址页-->
+			<div class="modal register">
+				<div class="container">
+					<div class="hd">添加收货地址<span class="close">关闭</span></div>
+					<div class="bd">
+						<form>
+							<label>
+		            地址名称: <input type="text" name="address_name" value="优才创智">
 		          </label>
-		          <label>
-		            收货人: <input type="text" name="consignee" value="maxwelldu">
+							<label>
+		            收货人: <input type="text" name="consignee" value="你好">
 		          </label>
-		          <label>
+							<label>
 		            国家: <input type="text" name="country" value="中国">
 		          </label>
-		          <label>
+							<label>
 		            省: <input type="text" name="province" value="北京">
 		          </label>
-		          <label>
+							<label>
 		            市: <input type="text" name="city" value="北京">
 		          </label>
-		          <label>
+							<label>
 		            区: <input type="text" name="district" value="石景山">
 		          </label>
-		          <label>
+							<label>
 		            地址: <input type="text" name="address" value="实兴东街11号朗诚大厦南楼二层">
 		          </label>
-		          <label>
+							<label>
 		            邮编: <input type="text" name="zip_code" value="100000">
 		          </label>
-		          <label>
-		            手机号: <input type="text" name="mobile" value="18518368050">
+							<label>
+		            手机号: <input type="text" name="mobile" value="18147555980">
 		          </label>
-		          <label>
-		            邮箱: <input type="text" name="email" value="dcj3sjt@126.com">
+							<label>
+		            邮箱: <input type="text" name="email" value="1814755598@126.com">
 		          </label>
-		          <label>
+							<label>
 		            电话: <input type="text" name="tel" value="010-91519281">
 		          </label>
-		          <label>
-		            最佳送货时间: <input type="text" name="besttime" value="周一到周五">
+							<label>
+		            最佳送货时间: <input type="text" name="besttime" value="周一到周六">
 		          </label>
-		          <label>
-		            标志物: <input type="text" name="sign_building" value="">
+							<label>
+		            标志物: <input type="text" name="sign_building" value="朗诚大厦">
 		          </label>
-		          <label>
+							<label>
 		            <input type="button" value="添加" class="add">
 		          </label>
-		        </form>
-		      </div>
-		    </div>
-		  </div>
-    </div>
-    <script type="text/javascript" src="js/animate-2.0.1.js" charset="utf-8"></script>
-  	<script src="js/modal.js" charset="utf-8"></script>
-    <script type="text/javascript" src="js/checkout.js" charset="utf-8"></script> 
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/animate-2.0.1.js" charset="utf-8"></script>
+		<script src="js/modal.js" charset="utf-8"></script>
+		<script type="text/javascript" src="js/checkout.js" charset="utf-8"></script>
 
-   
-    <!--页面底部-->
-    <div id="footer">
-      <div class="footer-01">
-        <div class="footer-01-top">
-          <ul>
-            <li>
-              <a href="#">阿里巴巴集团</a>|</li>
-            <li>
-              <a href="#">淘宝网</a>|</li>
-            <li>
-              <a href="#">天猫</a>|</li>
-            <li>
-              <a href="#">聚划算</a>|</li>
-            <li>
-              <a href="#">全球速卖通</a>|</li>
-            <li>
-              <a href="#">阿里巴巴国际交易市场</a>|</li>
-            <li>
-              <a href="#">1688</a>|</li>
-            <li>
-              <a href="#">阿里妈妈</a>|</li>
-            <li>
-              <a href="#">飞猪</a>|</li>
+		<!--页面底部-->
+		<div id="footer">
+			<div class="footer-01">
+				<div class="footer-01-top">
+					<ul>
+						<li>
+							<a href="#">阿里巴巴集团</a>|</li>
+						<li>
+							<a href="#">淘宝网</a>|</li>
+						<li>
+							<a href="#">天猫</a>|</li>
+						<li>
+							<a href="#">聚划算</a>|</li>
+						<li>
+							<a href="#">全球速卖通</a>|</li>
+						<li>
+							<a href="#">阿里巴巴国际交易市场</a>|</li>
+						<li>
+							<a href="#">1688</a>|</li>
+						<li>
+							<a href="#">阿里妈妈</a>|</li>
+						<li>
+							<a href="#">飞猪</a>|</li>
 
-            <li>
-              <a href="#">一淘</a>|</li>
-            <li>
-              <a href="#">万网</a>|</li>
-            <li>
-              <a href="#">高德</a>|</li>
-            <li>
-              <a href="#">UC</a>|</li>
-            <li>
-              <a href="#">友盟</a>
-            </li>
-            <li>
-              <a href="#">虾米</a>|</li>
-            <li>
-              <a href="#">阿里星球</a>|</li>
-            <li>
-              <a href="#">钉钉</a>|</li>
-            <li>
-              <a href="#">支付宝</a>|</li>
-            <li>
-              <a href="#">优酷</a>|</li>
-            <li>
-              <a href="#">土豆</a>|</li>
-            <li>
-              <a href="#">阿里健康</a>|</li>
-            <li>
-              <a href="#">阿里影业</a>|</li>
-            <li>
-              <a href="#">阿里体育</a>|</li>
-            <li>
-              <a href="#">网商银行</a>|</li>
-          </ul>
-        </div>
-        <div class="footer-01-bottom">
-          <ul>
-            <li>
-              <a href="#">关于淘抢购</a>
-            </li>
-            <li>
-              <a href="#">合作伙伴</a>
-            </li>
-            <li>
-              <a href="#">营销中心</a>
-            </li>
+						<li>
+							<a href="#">一淘</a>|</li>
+						<li>
+							<a href="#">万网</a>|</li>
+						<li>
+							<a href="#">高德</a>|</li>
+						<li>
+							<a href="#">UC</a>|</li>
+						<li>
+							<a href="#">友盟</a>
+						</li>
+						<li>
+							<a href="#">虾米</a>|</li>
+						<li>
+							<a href="#">阿里星球</a>|</li>
+						<li>
+							<a href="#">钉钉</a>|</li>
+						<li>
+							<a href="#">支付宝</a>|</li>
+						<li>
+							<a href="#">优酷</a>|</li>
+						<li>
+							<a href="#">土豆</a>|</li>
+						<li>
+							<a href="#">阿里健康</a>|</li>
+						<li>
+							<a href="#">阿里影业</a>|</li>
+						<li>
+							<a href="#">阿里体育</a>|</li>
+						<li>
+							<a href="#">网商银行</a>|</li>
+					</ul>
+				</div>
+				<div class="footer-01-bottom">
+					<ul>
+						<li>
+							<a href="#">关于淘抢购</a>
+						</li>
+						<li>
+							<a href="#">合作伙伴</a>
+						</li>
+						<li>
+							<a href="#">营销中心</a>
+						</li>
 
-            <li>
-              <a href="#">联系客服</a>
-            </li>
+						<li>
+							<a href="#">联系客服</a>
+						</li>
 
-            <li>
-              <a href="#">联系我们</a>
-            </li>
-            <li>
-              <a href="#">网站地图</a>
-            </li>
-            <li>
-              <a href="#">法律声明及隐私权政策</a>
-            </li>
-            <li>
-              <a href="#">知识产权</a>|</li>
-            <li style="margin-left:35px;">© 2003-2017 Taobao.com 版权所有</li>
-          </ul>
-          <div class="fonter-0101">
-            <p>
-              <a href="#">网络文化经营许可证：浙网文[2013]0268-027号</a>|</p>
-            <p>
-              <a href="#">增值电信业务经营许可证：浙B2-20080224</a>|</p>
-            <p>
-              <a style="color:#9c9c9c;">信息网络传播视听节目许可证：1109364号</a>
-            </p>
-            <p><i></i>
-              <a href="#">浙公网安备 33010002000078号 </a>
-              <p>
-          </div>
-          <div class="fonter-bottom01">
-            <div class="fonter-bottom01-1"><img src="images/footer-01.gif" /></div>
-            <div class="fonter-bottom01-2"></div>
-            <div class="fonter-bottom01-3"></div>
-            <div class="fonter-bottom01-4"></div>
-            <div class="fonter-bottom01-5"></div>
-            <div class="fonter-bottom01-6"></div>
-            <div class="fonter-bottom01-7"></div>
-            <div class="fonter-bottom01-8"></div>
-            <div class="fonter-bottom01-9"></div>
-            <div class="fonter-bottom01-10"></div>
-            <div class="fonter-bottom01-11"></div>
-            <div class="fonter-bottom01-12"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--回到顶部-->
-    <div id="backto">
-      <a href="javascript:;" class="backtotop" id="backtotop">回到顶部</a>
-    </div>
-    <!--回到顶部-->
-    <script src="js/backtotop.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-      var backtotop = new BackToTop('#backtotop');
-    </script>
-    <!--吸顶-->
-    <script src="js/onTop.js" type="text/javascript" charset="utf-8"></script>
-    
-  </body>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+						<li>
+							<a href="#">网站地图</a>
+						</li>
+						<li>
+							<a href="#">法律声明及隐私权政策</a>
+						</li>
+						<li>
+							<a href="#">知识产权</a>|</li>
+						<li style="margin-left:35px;">© 2003-2017 Taobao.com 版权所有</li>
+					</ul>
+					<div class="fonter-0101">
+						<p>
+							<a href="#">网络文化经营许可证：浙网文[2013]0268-027号</a>|</p>
+						<p>
+							<a href="#">增值电信业务经营许可证：浙B2-20080224</a>|</p>
+						<p>
+							<a style="color:#9c9c9c;">信息网络传播视听节目许可证：1109364号</a>
+						</p>
+						<p><i></i>
+							<a href="#">浙公网安备 33010002000078号 </a>
+							<p>
+					</div>
+					<div class="fonter-bottom01">
+						<div class="fonter-bottom01-1"><img src="images/footer-01.gif" /></div>
+						<div class="fonter-bottom01-2"></div>
+						<div class="fonter-bottom01-3"></div>
+						<div class="fonter-bottom01-4"></div>
+						<div class="fonter-bottom01-5"></div>
+						<div class="fonter-bottom01-6"></div>
+						<div class="fonter-bottom01-7"></div>
+						<div class="fonter-bottom01-8"></div>
+						<div class="fonter-bottom01-9"></div>
+						<div class="fonter-bottom01-10"></div>
+						<div class="fonter-bottom01-11"></div>
+						<div class="fonter-bottom01-12"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--回到顶部-->
+		<div id="backto">
+			<a href="javascript:;" class="backtotop" id="backtotop">回到顶部</a>
+		</div>
+		<!--回到顶部-->
+		<script src="js/backtotop.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var backtotop = new BackToTop('#backtotop');
+		</script>
+		<!--吸顶-->
+		<script src="js/onTop.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
 
 </html>
