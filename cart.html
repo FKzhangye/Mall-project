@@ -89,7 +89,7 @@
       	  <td>操作</td>
       	</tr>
       </table>
-      <div>小计：<span id="sum">0</span><input type="button" name="clear-cart" value="清空购物车" /><a href="checkout.html">结算</a></div>
+      <div>小计：<span id="sum">0</span><input type="button" name="clear-cart" value="清空购物车" id="clear-cart"/><a href="checkout.html">结算</a></div>
     </div>
     <!--页面底部-->
     <div id="footer">
@@ -206,31 +206,8 @@
         </div>
       </div>
     </div>
-    <!--<script type="text/javascript">
-    	var oTable = document.querySelector('table');
-    	var oSum = document.querySelector('#sum');
-    	myajax.get('http://h6.duchengjiu.top/shop/api_cart.php', 
-    	{token: localStorage.token},
-    	function(error, responseText){
-    	  var json = JSON.parse(responseText);
-    	  console.log(json);
-    	  var data = json.data;
-    	  for (var i = 0; i < data.length; i++) {
-    	  	var obj = data[i];
-    	  	obj.goods_sum = obj.goods_price * obj.goods_number;
-    	  	oTable.innerHTML += `<tr>
-                            <td name="goods_id">${obj.goods_id}</td>
-                            <td><img src="${obj.goods_thumb}" ></td>
-                            <td>${obj.goods_name}</td>
-                            <td><input data-id="${obj.goods_id}" type="number" name="number" min="1" max="10" value="${obj.goods_number}" /></td>
-                            <td>￥${obj.goods_price}</td>
-                            <td name="sum">￥${obj.goods_sum}</td>
-                            <td><input data-id="${obj.goods_id}" type="button" name="delete" value="删除"></td>
-                          </tr>`
-    	  }
-//  	  getSum();
-    	})
-    </script>-->
+    <!--购物车-->
+    <script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
     <!--回到顶部-->
     <div id="backto">
       <a href="javascript:;" class="backtotop" id="backtotop">回到顶部</a>
