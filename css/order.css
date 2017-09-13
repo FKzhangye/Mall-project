@@ -5,7 +5,7 @@
   border: 1px solid orange;
   float: left;
   margin:10px;
-  width: 510px;
+  width: 1053px;
 }
 
 #order li div.title {
@@ -14,7 +14,18 @@
   padding: 5px;
   border-bottom: 1px solid orange;
 }
-
+.goodsName{
+  width: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+.goodstThumb, .Number, .goodNumber{
+  width: 100px;
+}
+.goodsPrice{
+  width: 200px;
+  margin-left: 20px;
+}
 #order li div.order-goods {
   background-color: oldlace;
 }
@@ -23,7 +34,7 @@
   float: left;
   height: 120px;
   line-height: 120px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 #order li div.order-goods div img {

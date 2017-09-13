@@ -28,7 +28,7 @@ function(error,responseText){
 		var obj = data[i];
 		oGoods.innerHTML += `
 			<div class="goods">
-		        <a href="07_goods.html?goods_id=${obj.goods_id}">
+		        <a href="goods.html?goods_id=${obj.goods_id}">
 		            			<div class="img"><img src="${obj.goods_thumb}"/></div>
 		            			<div class="name">${obj.goods_name}</div>
 		            			<div class='price'>¥ ${obj.price}</div> 

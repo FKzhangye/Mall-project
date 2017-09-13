@@ -17,11 +17,11 @@ myajax.get('http://h6.duchengjiu.top/shop/api_order.php', {
       var goods = obj.goods_list[j];
       goodsHTML += `
             <div>
-              <div>${goods.goods_name}</div>
-              <div><img src="${goods.goods_thumb}"></div>
-              <div>单价：${goods.goods_price}</div>
-              <div>数量：${goods.goods_number}</div>
-              <div>小计：${goods.goods_price * goods.goods_number}</div>
+              <div class='goodsName'>${goods.goods_name}</div>
+              <div class='goodstThumb'><img src="${goods.goods_thumb}"></div>
+              <div class='goodsPrice'>单价：${goods.goods_price}</div>
+              <div class='Number'>数量：${goods.goods_number}</div>
+              <div class='goodNumber'>小计：${goods.goods_price * goods.goods_number}</div>
             </div>
           `;
     }
