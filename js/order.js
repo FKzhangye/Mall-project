@@ -44,9 +44,11 @@ oOrder.onclick = function(event){
   		return;
   	}
   	var order_id = target.dataset.id;
-  	myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=cancel', {order_id},
+  	myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=cancel', 
+  	{order_id},
   	function(error, responseText){
   	  var json = JSON.parse(responseText);
+  	  console.log(json);
   	  if (json.code === 0) {
   	  	alert('订单取消成功');
   	  }

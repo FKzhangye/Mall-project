@@ -50,7 +50,6 @@ oAddressUl.onclick = function(event) {
 			return;
 		}
 		var address_id = target.dataset.id;
-		console.log(address_id);
 		myajax.get('http://h6.duchengjiu.top/shop/api_useraddress.php', {
 			status: 'delete',
 			address_id,
@@ -109,8 +108,6 @@ oOrder.onclick = function() {
 		total_prices
 	}, function(err, responseText) {
 		var json = JSON.parse(responseText);
-		console.log(json);
-		console.log(json.code);
 		if(json.code === 2002) {
 			alert('下订单成功');
 			location.href = 'order.html';

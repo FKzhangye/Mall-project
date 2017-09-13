@@ -134,10 +134,10 @@ body {
 }
 .goods:hover{
   border: 1px solid orange;
-    
+  box-shadow: 0 0 2px 2px orange;
 }
 .goods:hover img{
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .img img{
   width: 100%;

@@ -5,7 +5,7 @@
 	font-size: 18px;
 	color: black;
 	background:orchid;
-	margin: auto;
+	margin:40px auto;
 }
 .sign{
 	width: 400px;
@@ -25,30 +25,28 @@
 	padding-left: 4px;
 }
 .sign11 input,.password input,.verification input{
-	width: 180px;
+	width: 197px;
 	height: 25px;
 	font-size: 18px;
 	line-height: 25px;
 }
-#sign-in button{
-	width: 322px;
-	height: 43px;
+#sign-in #button{
+	width: 299px;
+	height: 34px;
 	background: #eee;
-	font-size: 20px;
-	line-height: 40px;
-	margin: 0 30px;
-}
-#sign-in button:hover{
-	color: green;
-	font-size: 22px;
-	background: whitesmoke;
-	font-weight: 600;
+	font-size: 18px;
+	line-height: 30px;
+	margin: 0 36px;
 }
 #sign-in .error{
+	width: 300px;
+	height: 20px;
+	line-height: 20px;
 	background: white;
-	font-size: 15px;
+	font-size: 14px;
 	color: red;
 	display: none;
+	float: left;
 }
 
 .iagree{

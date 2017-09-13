@@ -106,6 +106,6 @@ function changeCircle() {
   for(var i = 0; i < circlesLi.length; i++) {
     circlesLi[i].className = "";
   }
-  //第信号量这个小圆点加cur
+  //对应信号量这个小圆点加cur
   circlesLi[n].className = "cur";
 }

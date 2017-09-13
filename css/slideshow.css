@@ -5,9 +5,8 @@
 
 .carousel {
   width: 1065px;
-  height: 500px;
-  margin: 10px auto;
-  border: 1px solid #333;
+  height: 450px;
+  margin: 20px auto;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -15,7 +14,7 @@
 
 .carousel .m_unit {
   width: 8000px;
-  height: 500px;
+  height: 450px;
   position: absolute;
   top: 0;
   left: 0;
@@ -28,19 +27,31 @@
 .carousel ul li {
   float: left;
   width: 1065px;
-  height: 500px;
+  height: 450px;
 }
 .carousel ul li img{
-  width: 100%;
-  height: 100%;
+ 	width: 1065px;
+  height: 450px;
 }
+
+.carousel:hover .btns{
+	display: block;
+}
+
+.btns{
+	display: none;
+}
+
 .btns a {
   position: absolute;
   width: 40px;
   height: 40px;
+  color: white;
+  line-height: 40px;
+  font-size: 18px;
   top: 50%;
   margin-top: -20px;
-  background-color: black;
+  background-color: orange;
   opacity: 0.7;
   font-size: 30px;
   line-height: 40px;
@@ -52,12 +63,7 @@
 
 .btns a:hover {
   background-color: white;
-  color: black;
-}
-.leftBtn,.rightBtn{
-  color: white;
-  line-height: 40px;
-  font-size: 18px;
+  color: orangered;
 }
 .leftBtn {
   left: 10px;
@@ -83,7 +89,7 @@
   float: left;
   width: 16px;
   height: 16px;
-  background-color: black;
+  background-color: orange;
   opacity: 0.7;
   margin-right: 6px;
   border-radius: 50%;
@@ -93,3 +99,4 @@
 .circles ol li.cur {
   background-color: white;
 }
+
