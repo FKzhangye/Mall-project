@@ -40,7 +40,8 @@ main{
 }
 
 .address-ul li.selected {
-    border: 2px solid white;
+    border: 2px solid orange;
+    background: white;
 }
 
 .address .delete{

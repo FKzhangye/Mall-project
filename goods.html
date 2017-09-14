@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     
     <link rel="stylesheet" type="text/css" href="css/goods.css"/>
-
+    <link rel="stylesheet" type="text/css" href="css/toast.css"/>
     <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
   </head>
 
@@ -81,6 +81,7 @@
     <div id="content">
       <ul id="goods"></ul>
     </div>
+    <script src="js/toast.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
       var oGoods = document.querySelector('#goods');
       var goods_id = getQueryString('goods_id');
@@ -105,9 +106,10 @@
           var target = event.target || event.srcElement;
           if (target.id === 'add-to-cart') {
           	if (!localStorage.token) {
-          		alert('请先登录在购买');
+          		
           		localStorage.backurl = location.href
-          		location.href = 'login.html';
+          		toast('请先登录在购买',2000);
+//        		location.href = 'login.html';
           		return;
           	}
           	console.log('添加到购物车');
@@ -117,7 +119,7 @@
           	  var json = JSON.parse(responseText);
           	  console.log(json);
           	  if (json.code === 0) {
-          	  	alert('添加到购物车成功');
+          	  	toast('添加到购物车成功',2000);
           	  }
           	})
           }

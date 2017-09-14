@@ -28,7 +28,7 @@ myajax.get('http://h6.duchengjiu.top/shop/api_order.php', {
     //一件商品的总价
     oOrder.innerHTML += `
                           <li>
-                            <div class="title">收货人：${obj.consignee} 总价:${obj.total_prices} <span data-id="${obj.order_id}" class="cancel-order">取消订单</span></div>
+                            <div class="title">收货人：${obj.consignee} &nbsp&nbsp&nbsp 总价:${obj.total_prices} <span data-id="${obj.order_id}" class="cancel-order">取消订单</span></div>
                             <div class="order-goods">
                             ${goodsHTML}
                             </div>

@@ -100,7 +100,7 @@ var oOrder = document.querySelector('#order');
 oOrder.onclick = function() {
 	var address_id = selected_address_id;
 	if(address_id === 0) {
-		alert('请选择一个收货地址');
+		toast('请选择一个收货地址');
 		return;
 	}
 	var total_prices = localStorage.sum;
@@ -112,8 +112,8 @@ oOrder.onclick = function() {
 		console.log(json);
 		console.log(json.code);
 		if(json.code === 0) {
-			alert('下订单成功');
-			location.href = 'order.html';
+			toast('下订单成功');
+//			location.href = 'order.html';
 		}
 	});
 }
