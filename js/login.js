@@ -1,6 +1,6 @@
 var oUsername = document.querySelector("input[name=username]");
 var oVerify = document.querySelector("input[name=verify]");
-var oSubmit = document.querySelector("button");
+var oSubmit = document.querySelector("#button");
 
 var oUser = document.querySelector("#errorUsername");
 var oVer = document.querySelector("#errorVerification");

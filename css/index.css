@@ -56,7 +56,7 @@ body {
   width: 1065px;
   height: 50px;
   margin: auto;
-  background: orange;
+	background-image: linear-gradient(to top,#fc871f,#fcd6b5);
   z-index: 99999;
 }
 
@@ -75,7 +75,7 @@ body {
   text-decoration: none;
   color: white;
   padding: 5px;
-  background: orange;
+	background-image: linear-gradient(to top,#fc871f,#fcd6b5);
   border-radius: 5px;
 }
 

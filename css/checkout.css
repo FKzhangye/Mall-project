@@ -30,13 +30,12 @@ main{
 .address li{
 	width: 238px;
 	height: 120px;
-	background: orchid;
+	background-image: linear-gradient(to top,#fce1e8,#ecdaf4);
 	float: left;
 	margin: 10px;
 	overflow: hidden;
 	border-radius: 10px;
 	position: relative;
-	border: 2px solid orchid;
 }
 
 .address-ul li.selected {

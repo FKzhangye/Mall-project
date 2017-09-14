@@ -8,7 +8,7 @@
     <!--回到顶部-->    
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
     <link rel="stylesheet" type="text/css" href="css/toast.css"/>
   </head>
   <body>
@@ -81,12 +81,12 @@
     <div id="content">
       <div id="sign-in">
 			<div class="sign">用户登录</div>
-				<div class="sign11">
+				<div class="sign11" id="sign11">
 					<span>用户登录:</span>
 					<input type="text" name="username" placeholder="请输入用户名">
 					<span class="error" calss="" id="errorUsername">用户名不存在，请重新输入</span>
 				</div>
-				<div class="verification">
+				<div class="verification" id="verification"">
 					<span>输入密码:</span>
 			  		<input class="verify" type="password" name="verify" placeholder="请输入密码">
 					<span class="error"class="" id="errorVerification">密码错误，请重新输入</span>
@@ -97,7 +97,7 @@
 						<a href="http://www.iliangcang.com/i/our/service">淘抢购注册条款</a>
 					</label>
 				</div>
-			  	<button>立即登录</button>
+			  	<input type="button" name="button" id="button" value="立即登录"/>
 			  	<!--登录-->
 			  	<script type="text/javascript" src="js/toast.js"></script>
 					<script type="text/javascript" src = "js/login.js"></script>

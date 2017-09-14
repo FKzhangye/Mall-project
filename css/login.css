@@ -4,7 +4,7 @@
 	height: 420px;
 	font-size: 18px;
 	color: black;
-	background:orange;
+	background-image: linear-gradient(to top,#acc0ff,#d0bee8,#fee3ec);
 	margin:40px auto;
 }
 .sign{
@@ -39,6 +39,9 @@
 	font-size: 18px;
 	line-height: 30px;
 	margin: 0 36px;
+	color: orangered;
+    font-weight: 600;
+    background-image:radial-gradient(#fff);	
 	border-style: none;
 	border-radius: 5px;
 }

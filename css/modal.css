@@ -11,24 +11,23 @@
 .modal .container {
 	position: absolute;
 	left: 30%;
-	top: 20%;
+	top: 10%;
 	width: 500px;
 	margin: 0 auto;
-	background-color: white;
-	border: 1px solid orange;
+	background-color: #ffc;
 }
 
 .modal .container .hd {
 	line-height: 40px;
 	text-align: right;
 	padding-right: 10px;
-	background-color: #ccc;
-	border-bottom: 1px solid orange;
+	background-color: lightsteelblue;
 }
 
 .modal .container .hd span {
 	cursor: pointer;
-	color: orange;
+	color: red;
+	font-weight: 600;
 	padding: 5px;
 	border-radius: 5px;
 }
@@ -42,11 +41,28 @@
 	padding: 10px;
 }
 form {
-	padding-right: 150px;
+	padding-right: 120px;
 }
 
 label {
+	height: 22px;
 	display: block;
 	text-align: right;
-	margin-bottom: 5px;
+	margin-top: 10px;
+}
+.bd input{
+	height: 22px;
+	line-height: 22px;
+	width: 210px;
+	padding-left: 10px;
+	border-radius: 2px;
+	border: none;
+}
+button{
+	width: 50px;
+	height: 26px;
+	background: #f9f;
+	line-height: 26px;
+	border: none;
+	border-radius: 6px;
 }
