@@ -8,9 +8,9 @@
     <!--回到顶部-->
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    
-    <link rel="stylesheet" type="text/css" href="css/goods.css"/>
-    <link rel="stylesheet" type="text/css" href="css/toast.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/goods.css" />
+    <link rel="stylesheet" type="text/css" href="css/toast.css" />
     <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
   </head>
 
@@ -87,41 +87,43 @@
       var goods_id = getQueryString('goods_id');
       console.log(goods_id);
       myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {
-          goods_id
-        },
-        function(error, responseText) {
-          var json = JSON.parse(responseText);
-          var obj = json.data[0];
-          console.log(json);
-          oGoods.innerHTML = `<div>
+            goods_id
+          },
+          function(error, responseText) {
+            var json = JSON.parse(responseText);
+            var obj = json.data[0];
+            console.log(json);
+            oGoods.innerHTML = `<div>
             <div class = 'img'><img src="${obj.goods_thumb}"></div>
             <div class = 'name right'>${obj.goods_name}</div>
             <div class = 'desc right'>${obj.goods_desc}</div>
             <div class = 'price right'>¥ ${obj.price} 元</div>
             <div class = 'button right'><input type='button' id='add-to-cart' value='添加到购物车'/></div>
           </div>`
-        }),
-        document.body.onclick = function(event){
+          }),
+        document.body.onclick = function(event) {
           event = event || window.event;
           var target = event.target || event.srcElement;
-          if (target.id === 'add-to-cart') {
-          	if (!localStorage.token) {
-          		
-          		localStorage.backurl = location.href
-          		toast('请先登录在购买',2000);
-//        		location.href = 'login.html';
-          		return;
-          	}
-          	console.log('添加到购物车');
-          	myajax.post('http://h6.duchengjiu.top/shop/api_cart.php?token='+localStorage.token,
-          	{goods_id, numder:1},
-          	function(error, responseText){
-          	  var json = JSON.parse(responseText);
-          	  console.log(json);
-          	  if (json.code === 0) {
-          	  	toast('添加到购物车成功',2000);
-          	  }
-          	})
+          if(target.id === 'add-to-cart') {
+            if(!localStorage.token) {
+
+              localStorage.backurl = location.href
+              toast('请先登录在购买', 2000);
+              //        		location.href = 'login.html';
+              return;
+            }
+            console.log('添加到购物车');
+            myajax.post('http://h6.duchengjiu.top/shop/api_cart.php?token=' + localStorage.token, {
+                goods_id,
+                numder: 1
+              },
+              function(error, responseText) {
+                var json = JSON.parse(responseText);
+                console.log(json);
+                if(json.code === 0) {
+                  toast('添加到购物车成功', 2000);
+                }
+              })
           }
         }
     </script>
@@ -134,20 +136,20 @@
             <a>活动流程</a>
             <a>招商规则</a>
             <a>报名入口</a>
-            <a>卖家管理细则</a>           
+            <a>卖家管理细则</a>
           </li>
           <li>
             <div>有话要说</div>
             <a>客服热线</a>
-            <a>廉政举报</a>           
+            <a>廉政举报</a>
           </li>
           <li>
             <div>淘抢购手机客户端</div>
-            <a><img src="images/TB1KOplIpXXXXXjXXXXO518_pXX-132-132.png"/></a>
+            <a><img src="images/TB1KOplIpXXXXXjXXXXO518_pXX-132-132.png" /></a>
           </li>
           <li>
             <div>淘抢购千牛账号</div>
-            <a><img src="images/TB188RbIpXXXXb7XFXXn6oRGVXX-141-141.png.jpg"/></a>            
+            <a><img src="images/TB188RbIpXXXXb7XFXXn6oRGVXX-141-141.png.jpg" /></a>
           </li>
           <li>
             <div>优惠地图</div>
@@ -160,7 +162,7 @@
             <a>关于抢购</a>
             <a>关于集分宝</a>
             <a>关于会员特权</a>
-          </li>         
+          </li>
         </ul>
       </div>
       <div id="footerBottom">

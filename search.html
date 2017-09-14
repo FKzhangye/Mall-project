@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>搜索</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <!--回到顶部-->    
+    <!--回到顶部-->
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
 
   </head>
+
   <body>
     <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
     <!--页面头部-->
@@ -29,12 +30,12 @@
 
           <a href="order.html">我的订单</a>
           <a href="index.html">返回首頁</a>
-          
+
         </div>
       </div>
     </div>
     <script type="text/javascript">
-      if(localStorage.username){
+      if(localStorage.username) {
         var oUsername = document.querySelector('a[name=username]');
         var oLogout = document.querySelector('.logout');
         oUsername.innerText = localStorage.username;
@@ -53,21 +54,21 @@
       <input type="text" id="search" placeholder="请输入搜索内容内容" />
       <ul id="cat"></ul>
     </div>
-    <!--页面导航-->    
+    <!--页面导航-->
     <script type="text/javascript">
       var oSearch = document.querySelector('#search');
-      oSearch.onkeyup = function(event){
-        if (event.keyCode === 13) {
-          location.href = 'search.html?search_text='+this.value;
+      oSearch.onkeyup = function(event) {
+        if(event.keyCode === 13) {
+          location.href = 'search.html?search_text=' + this.value;
         }
       }
     </script>
     <script type="text/javascript">
       var oCat = document.querySelector('#cat');
-      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText){
+      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText) {
         var json = JSON.parse(responseText);
         var data = json.data;
-        for (var i = 0; i < data.length; i++) {
+        for(var i = 0; i < data.length; i++) {
           var obj = data[i];
           oCat.innerHTML += `<li><a href='list.html?cat_id=${obj.cat_id}'>${obj.cat_name}</a></li>`
         }
@@ -75,14 +76,14 @@
     </script>
     <!--页面内容-->
     <!--轮播-->
-    
+
     <!--内容区域-->
     <div id="content">
       <p>≡ 搜索结果</p>
       <div id="hot-goods"></div>
     </div>
     <script type="text/javascript" src="js/search.js"></script>
-    
+
     <!--页面底部-->
     <div id="footer">
       <div id="footerTop">
@@ -161,7 +162,7 @@
     </script>
     <!--吸顶-->
     <script src="js/onTop.js" type="text/javascript" charset="utf-8"></script>
-    
+
   </body>
 
 </html>

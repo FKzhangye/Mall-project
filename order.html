@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<head>
+
+  <head>
     <meta charset="UTF-8">
     <title>我的订单</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <!--回到顶部-->    
+    <!--回到顶部-->
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <link rel="stylesheet" type="text/css" href="css/order.css"/>
-    
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/order.css" />
+
     <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
   </head>
+
   <body>
 
     <!--页面头部-->
@@ -30,12 +32,12 @@
 
           <a href="order.html">我的订单</a>
           <a href="index.html">返回首頁</a>
-          
+
         </div>
       </div>
     </div>
     <script type="text/javascript">
-      if(localStorage.username){
+      if(localStorage.username) {
         var oUsername = document.querySelector('a[name=username]');
         var oLogout = document.querySelector('.logout');
         oUsername.innerText = localStorage.username;
@@ -54,30 +56,30 @@
       <input type="text" id="search" placeholder="请输入搜索内容内容" />
       <ul id="cat"></ul>
     </div>
-    <!--页面导航-->    
+    <!--页面导航-->
     <script type="text/javascript">
       var oSearch = document.querySelector('#search');
-      oSearch.onkeyup = function(event){
-        if (event.keyCode === 13) {
-          location.href = 'search.html?search_text='+this.value;
+      oSearch.onkeyup = function(event) {
+        if(event.keyCode === 13) {
+          location.href = 'search.html?search_text=' + this.value;
         }
       }
     </script>
     <script type="text/javascript">
       var oCat = document.querySelector('#cat');
-      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText){
+      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText) {
         var json = JSON.parse(responseText);
         var data = json.data;
-        for (var i = 0; i < data.length; i++) {
+        for(var i = 0; i < data.length; i++) {
           var obj = data[i];
           oCat.innerHTML += `<li><a href='list.html?cat_id=${obj.cat_id}'>${obj.cat_name}</a></li>`
         }
       });
     </script>
-    
+
     <!--内容区域-->
     <div id="content">
-      <ul id="order"></ul>      
+      <ul id="order"></ul>
     </div>
     <!--页面底部-->
     <div id="footer">
@@ -88,20 +90,20 @@
             <a>活动流程</a>
             <a>招商规则</a>
             <a>报名入口</a>
-            <a>卖家管理细则</a>           
+            <a>卖家管理细则</a>
           </li>
           <li>
             <div>有话要说</div>
             <a>客服热线</a>
-            <a>廉政举报</a>           
+            <a>廉政举报</a>
           </li>
           <li>
             <div>淘抢购手机客户端</div>
-            <a><img src="images/TB1KOplIpXXXXXjXXXXO518_pXX-132-132.png"/></a>
+            <a><img src="images/TB1KOplIpXXXXXjXXXXO518_pXX-132-132.png" /></a>
           </li>
           <li>
             <div>淘抢购千牛账号</div>
-            <a><img src="images/TB188RbIpXXXXb7XFXXn6oRGVXX-141-141.png.jpg"/></a>            
+            <a><img src="images/TB188RbIpXXXXb7XFXXn6oRGVXX-141-141.png.jpg" /></a>
           </li>
           <li>
             <div>优惠地图</div>
@@ -114,7 +116,7 @@
             <a>关于抢购</a>
             <a>关于集分宝</a>
             <a>关于会员特权</a>
-          </li>         
+          </li>
         </ul>
       </div>
       <div id="footerBottom">

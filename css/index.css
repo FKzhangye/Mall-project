@@ -56,7 +56,7 @@ body {
   width: 1065px;
   height: 50px;
   margin: auto;
-  background: orange;
+  background-image: linear-gradient(to top, #fc871f, #fcd6b5);
   z-index: 99999;
 }
 
@@ -75,7 +75,7 @@ body {
   text-decoration: none;
   color: white;
   padding: 5px;
-  background: orange;
+  background-image: linear-gradient(to top, #fc871f, #fcd6b5);
   border-radius: 5px;
 }
 
@@ -106,19 +106,21 @@ body {
 #cats {
   overflow: hidden;
 }
-.catP{
+
+.catP {
   padding: 100px 0;
   text-align: center;
   font-size: 18px;
   color: white;
-  
 }
-.catP span{
+
+.catP span {
   height: 20px;
   background: orange;
   padding: 5px 20px;
   border-radius: 10px;
 }
+
 #content p {
   height: 30px;
   width: 1069px;
@@ -198,7 +200,10 @@ body {
   color: orange;
   line-height: 23px;
 }
+
+
 /*底部*/
+
 #footer {
   height: 300px;
   background: oldlace;
@@ -257,4 +262,3 @@ body {
   line-height: 30px;
   text-align: center;
 }
-

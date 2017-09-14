@@ -36,21 +36,23 @@ myajax.get('http://h6.duchengjiu.top/shop/api_order.php', {
                           `;
   }
 });
-oOrder.onclick = function(event){
+oOrder.onclick = function(event) {
   event = event || window.event;
   var target = event.target || event.srcElement;
-  if (target.className === 'cancel-order') {
-  	if (!confirm('确定取消订单吗?')) {
-  		return;
-  	}
-  	var order_id = target.dataset.id;
-  	myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=cancel', {order_id},
-  	function(error, responseText){
-  	  var json = JSON.parse(responseText);
-  	  if (json.code === 0) {
-  	  	alert('订单取消成功');
-  	  }
-  	});
+  if(target.className === 'cancel-order') {
+    if(!confirm('确定取消订单吗?')) {
+      return;
+    }
+    var order_id = target.dataset.id;
+    myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token=' + localStorage.token + '&status=cancel', {
+        order_id
+      },
+      function(error, responseText) {
+        var json = JSON.parse(responseText);
+        if(json.code === 0) {
+          alert('订单取消成功');
+        }
+      });
   }
-  
+
 }

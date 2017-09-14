@@ -47,7 +47,7 @@ oTable.onchange = function(event) {
           target.parentNode.nextElementSibling.nextElementSibling.innerText = parseInt(target.value) * goods_price;
           getSum();
         }
-        
+
       });
   }
 }

@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <title>登录</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <!--回到顶部-->    
+    <!--回到顶部-->
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-		<link rel="stylesheet" type="text/css" href="css/login.css"/>
-    <link rel="stylesheet" type="text/css" href="css/toast.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
+    <link rel="stylesheet" type="text/css" href="css/toast.css" />
   </head>
+
   <body>
-  	<!--myajax-->
-		<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+    <!--myajax-->
+    <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
 
     <!--页面头部-->
     <div id="header">
@@ -32,12 +33,12 @@
 
           <a href="order.html">我的订单</a>
           <a href="index.html">返回首頁</a>
-          
+
         </div>
       </div>
     </div>
     <script type="text/javascript">
-      if(localStorage.username){
+      if(localStorage.username) {
         var oUsername = document.querySelector('a[name=username]');
         var oLogout = document.querySelector('.logout');
         oUsername.innerText = localStorage.username;
@@ -56,56 +57,56 @@
       <input type="text" id="search" placeholder="请输入搜索内容内容" />
       <ul id="cat"></ul>
     </div>
-    <!--页面导航-->    
+    <!--页面导航-->
     <script type="text/javascript">
       var oSearch = document.querySelector('#search');
-      oSearch.onkeyup = function(event){
-        if (event.keyCode === 13) {
-          location.href = 'search.html?search_text='+this.value;
+      oSearch.onkeyup = function(event) {
+        if(event.keyCode === 13) {
+          location.href = 'search.html?search_text=' + this.value;
         }
       }
     </script>
     <script type="text/javascript">
       var oCat = document.querySelector('#cat');
-      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText){
+      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText) {
         var json = JSON.parse(responseText);
         var data = json.data;
-        for (var i = 0; i < data.length; i++) {
+        for(var i = 0; i < data.length; i++) {
           var obj = data[i];
           oCat.innerHTML += `<li><a href='list.html?cat_id=${obj.cat_id}'>${obj.cat_name}</a></li>`
         }
       });
     </script>
-    
+
     <!--内容区域-->
     <div id="content">
       <div id="sign-in">
-			<div class="sign">用户登录</div>
-				<div class="sign11">
-					<span>用户登录:</span>
-					<input type="text" name="username" placeholder="请输入用户名">
-					<span class="error" calss="" id="errorUsername">用户名不存在，请重新输入</span>
-				</div>
-				<div class="verification">
+        <div class="sign">用户登录</div>
+        <div class="sign11" id="sign11">
+          <span>用户登录:</span>
+          <input type="text" name="username" placeholder="请输入用户名">
+          <span class="error" calss="" id="errorUsername">用户名不存在，请重新输入</span>
+        </div>
+        <div class="verification" id="verification" ">
 					<span>输入密码:</span>
-			  		<input class="verify" type="password" name="verify" placeholder="请输入密码">
-					<span class="error"class="" id="errorVerification">密码错误，请重新输入</span>
+			  		<input class="verify " type="password " name="verify " placeholder="请输入密码 ">
+					<span class="error "class=" " id="errorVerification ">密码错误，请重新输入</span>
 				</div>
-				<div class="iagree">
-					<input type="checkbox" id="agree" checked="checked"/>
-					<label for="agree" style="margin-left:10px">我已阅读并同意
-						<a href="http://www.iliangcang.com/i/our/service">淘抢购注册条款</a>
+				<div class="iagree ">
+					<input type="checkbox " id="agree " checked="checked "/>
+					<label for="agree " style="margin-left:10px ">我已阅读并同意
+						<a href="http://www.iliangcang.com/i/our/service ">淘抢购注册条款</a>
 					</label>
 				</div>
-			  	<button>立即登录</button>
+			  	<input type="button " name="button " id="button " value="立即登录 "/>
 			  	<!--登录-->
-			  	<script type="text/javascript" src="js/toast.js"></script>
-					<script type="text/javascript" src = "js/login.js"></script>
+			  	<script type="text/javascript " src="js/toast.js "></script>
+					<script type="text/javascript " src = "js/login.js "></script>
 			</div>
     </div>
     <!--页面底部-->
-    <div id="footer">
-      <div id="footerTop">
+    <div id="footer ">
+      <div id="footerTop ">
         <ul>
           <li>
             <div>关于淘抢购</div>
@@ -121,11 +122,11 @@
           </li>
           <li>
             <div>淘抢购手机客户端</div>
-            <a><img src="images/TB1KOplIpXXXXXjXXXXO518_pXX-132-132.png" /></a>
+            <a><img src="images/TB1KOplIpXXXXXjXXXXO518_pXX-132-132.png " /></a>
           </li>
           <li>
             <div>淘抢购千牛账号</div>
-            <a><img src="images/TB188RbIpXXXXb7XFXXn6oRGVXX-141-141.png.jpg" /></a>
+            <a><img src="images/TB188RbIpXXXXb7XFXXn6oRGVXX-141-141.png.jpg " /></a>
           </li>
           <li>
             <div>优惠地图</div>
@@ -141,7 +142,7 @@
           </li>
         </ul>
       </div>
-      <div id="footerBottom">
+      <div id="footerBottom ">
         <ul>
           <li>阿里巴巴集团</li>
           <li>淘宝网</li>
@@ -171,16 +172,16 @@
       </div>
     </div>
     <!--回到顶部-->
-    <div id="backto">
-      <a href="javascript:;" class="backtotop" id="backtotop">回到顶部</a>
+    <div id="backto ">
+      <a href="javascript:; " class="backtotop " id="backtotop ">回到顶部</a>
     </div>
     <!--回到顶部-->
-    <script src="js/backtotop.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/backtotop.js " type="text/javascript " charset="utf-8 "></script>
     <script>
       var backtotop = new BackToTop('#backtotop');
     </script>
     <!--吸顶-->
-    <script src="js/onTop.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/onTop.js " type="text/javascript " charset="utf-8 "></script>
   </body>
 
 </html>

@@ -17,49 +17,49 @@ var passwordState = false;
 oSubmit.disabled = true;
 
 oName.onblur = function() {
-	if(!/^\w{3,16}$/.test(this.value)) {
-		oUser.style.display = "block";
-	}
+  if(!/^\w{3,16}$/.test(this.value)) {
+    oUser.style.display = "block";
+  }
 }
 oPass.onblur = function() {
-	if(!/^\w{6,16}$/.test(this.value)) {
-		oPass1.style.display = "block";
-	}
+  if(!/^\w{6,16}$/.test(this.value)) {
+    oPass1.style.display = "block";
+  }
 }
 oPassword.onblur = function() {
-	passwordState = (oPassword.value === oPass.value);
-	if(!passwordState) {
-		oVerify.style.display = "block";
-	} else {
-		ajaxVerify();
-	}
+  passwordState = (oPassword.value === oPass.value);
+  if(!passwordState) {
+    oVerify.style.display = "block";
+  } else {
+    ajaxVerify();
+  }
 
 }
 
 function checkFormState() {
-	formState = nameState && passState && passwordState;
-	oSubmit.disabled = !formState;
+  formState = nameState && passState && passwordState;
+  oSubmit.disabled = !formState;
 }
 
 function ajaxVerify() {
-	myajax.post('http://h6.duchengjiu.top/shop/api_user.php', {
-		status: 'register',
-		username: oName.value,
-		password: oPass.value
-	}, function(err, responseText) {
-		var json = JSON.parse(responseText);
-		toast(json.message,2000);
-		if(json.message === "注册成功") {
-			nameState = true;
-			passState = true;
-			checkFormState()
-		}
-		oSubmit.onclick = function() {
-			if(localStorage.backurl) {
-				location.href = localStorage.backurl;
-			} else {
-				location.href = 'login.html';
-			}
-		}
-	});
+  myajax.post('http://h6.duchengjiu.top/shop/api_user.php', {
+    status: 'register',
+    username: oName.value,
+    password: oPass.value
+  }, function(err, responseText) {
+    var json = JSON.parse(responseText);
+    toast(json.message, 2000);
+    if(json.message === "注册成功") {
+      nameState = true;
+      passState = true;
+      checkFormState()
+    }
+    oSubmit.onclick = function() {
+      if(localStorage.backurl) {
+        location.href = localStorage.backurl;
+      } else {
+        location.href = 'login.html';
+      }
+    }
+  });
 }

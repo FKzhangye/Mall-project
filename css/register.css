@@ -4,7 +4,7 @@
 	height: 420px;
 	font-size: 18px;
 	color: black;
-	background:orange;
+	background-image: linear-gradient(to top,#acc0ff,#d0bee8,#fee3ec);
 	margin:40px auto;
 }
 .sign{
@@ -24,6 +24,11 @@
 	margin-bottom: 0;
 	padding-left: 4px;
 }
+
+#sign11,#verification{
+	margin:50px 30px;
+}
+
 .sign11 input,.password input,.verification input{
 	width: 197px;
   height: 25px;
@@ -34,20 +39,22 @@
   padding-left: 5px;
 }
 #sign-in #button{
-	width: 299px;
+  width: 299px;
   height: 34px;
   font-size: 18px;
   line-height: 30px;
   margin: 0 36px;
+  color: black;
+  background:whitesmoke;
   border-style: none;
   border-radius: 5px;
 }
 #sign-in .error{
-	width: 300px;
+  width: 300px;
   height: 20px;
   line-height: 20px;
   font-size: 16px;
-  color: whitesmoke;
+  color: red;
   display: none;
   text-align: center;
   float: left;
@@ -63,7 +70,7 @@
 }
 .iagree a{
 	text-decoration: none;
-	color: wheat;
+	color: blue;
 }
 .iagree a:hover{
 	text-decoration: underline;

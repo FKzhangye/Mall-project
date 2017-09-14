@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <title>注册</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <!--回到顶部-->    
+    <!--回到顶部-->
     <link rel="stylesheet" type="text/css" href="css/backtotop.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-   	<!-- 登录-->
-		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- 登录-->
+    <link rel="stylesheet" type="text/css" href="css/register.css" />
     <!--alert toast-->
-    <link rel="stylesheet" type="text/css" href="css/toast.css"/>
+    <link rel="stylesheet" type="text/css" href="css/toast.css" />
   </head>
+
   <body>
-  	<!--myajax-->
-		<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
-		
+    <!--myajax-->
+    <script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>
+
     <!--页面头部-->
     <div id="header">
       <div id="head">
@@ -34,12 +35,12 @@
 
           <a href="order.html">我的订单</a>
           <a href="index.html">返回首頁</a>
-          
+
         </div>
       </div>
     </div>
     <script type="text/javascript">
-      if(localStorage.username){
+      if(localStorage.username) {
         var oUsername = document.querySelector('a[name=username]');
         var oLogout = document.querySelector('.logout');
         oUsername.innerText = localStorage.username;
@@ -58,21 +59,21 @@
       <input type="text" id="search" placeholder="请输入搜索内容内容" />
       <ul id="cat"></ul>
     </div>
-    <!--页面导航-->    
+    <!--页面导航-->
     <script type="text/javascript">
       var oSearch = document.querySelector('#search');
-      oSearch.onkeyup = function(event){
-        if (event.keyCode === 13) {
-          location.href = 'search.html?search_text='+this.value;
+      oSearch.onkeyup = function(event) {
+        if(event.keyCode === 13) {
+          location.href = 'search.html?search_text=' + this.value;
         }
       }
     </script>
     <script type="text/javascript">
       var oCat = document.querySelector('#cat');
-      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText){
+      myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText) {
         var json = JSON.parse(responseText);
         var data = json.data;
-        for (var i = 0; i < data.length; i++) {
+        for(var i = 0; i < data.length; i++) {
           var obj = data[i];
           oCat.innerHTML += `<li><a href='list.html?cat_id=${obj.cat_id}'>${obj.cat_name}</a></li>`
         }
@@ -80,40 +81,40 @@
     </script>
     <!--页面内容-->
     <!--轮播-->
-    
+
     <!--内容区域-->
     <div id="content">
       <div id="sign-in">
-			<div class="sign">用户注册</div>
-				<div class="sign11">
-					<span>用户注册:</span>
-					<input type="text" name="username" placeholder="请输入用户名">
-					<span class="error" calss="" id="errorUsername">用户名不合法，请填写3-20位的英文数字下划线</span>
-				</div>
-				<div class="password">
-					<span>设置密码:</span>
-			  		<input type="password" name="password" placeholder="请输入密码">
-						<span class="error" class="" id="errorPassworld">密码最小长度为6位</span>
-				</div>
-				<div class="verification">
-					<span>密码验证:</span>
-			  		<input class="verify" type="password" name="verify" placeholder="请重新输入密码">
-					<span class="error"class="" id="errorVerification">密码验证错误</span>
-				</div>
-				<div class="iagree">
-					<input type="checkbox" id="agree" checked="checked"/>
-					<label for="agree" style="margin-left:10px">我已阅读并同意
+        <div class="sign">用户注册</div>
+        <div class="sign11">
+          <span>用户注册:</span>
+          <input type="text" name="username" placeholder="请输入用户名">
+          <span class="error" calss="" id="errorUsername">用户名不合法，请填写3-20位的英文数字下划线</span>
+        </div>
+        <div class="password">
+          <span>设置密码:</span>
+          <input type="password" name="password" placeholder="请输入密码">
+          <span class="error" class="" id="errorPassworld">密码最小长度为6位</span>
+        </div>
+        <div class="verification">
+          <span>密码验证:</span>
+          <input class="verify" type="password" name="verify" placeholder="请重新输入密码">
+          <span class="error" class="" id="errorVerification">密码验证错误</span>
+        </div>
+        <div class="iagree">
+          <input type="checkbox" id="agree" checked="checked" />
+          <label for="agree" style="margin-left:10px">我已阅读并同意
 						<a href="http://www.iliangcang.com/i/our/service">淘抢购注册条款</a>
 					</label>
-				</div>
-			  	<input type="button" name="button" id="button" value="立即注册"/>
-			</div>
+        </div>
+        <input type="button" name="button" id="button" value="立即注册" />
+      </div>
     </div>
-    
-    	<!--登录js-->
-    	<script type="text/javascript" src="js/toast.js"></script>
-		<script type="text/javascript" src="js/register.js"></script>
-    
+
+    <!--登录js-->
+    <script type="text/javascript" src="js/toast.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+
     <!--页面底部-->
     <div id="footer">
       <div id="footerTop">
@@ -193,7 +194,6 @@
     <!--吸顶-->
     <script src="js/onTop.js" type="text/javascript" charset="utf-8"></script>
 
-    
   </body>
 
 </html>
