@@ -1,0 +1,68 @@
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .container {
+	position: absolute;
+	left: 30%;
+	top: 10%;
+	width: 500px;
+	margin: 0 auto;
+	background-color: #ffc;
+}
+
+.modal .container .hd {
+	line-height: 40px;
+	text-align: right;
+	padding-right: 10px;
+	background-color: lightsteelblue;
+}
+
+.modal .container .hd span {
+	cursor: pointer;
+	color: red;
+	font-weight: 600;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.modal .container .hd span:hover {
+	background-color: orange;
+	color: white;
+}
+
+.modal .container .bd {
+	padding: 10px;
+}
+form {
+	padding-right: 120px;
+}
+
+label {
+	height: 22px;
+	display: block;
+	text-align: right;
+	margin-top: 10px;
+}
+.bd input{
+	height: 22px;
+	line-height: 22px;
+	width: 210px;
+	padding-left: 10px;
+	border-radius: 2px;
+	border: none;
+}
+button{
+	width: 50px;
+	height: 26px;
+	background: #f9f;
+	line-height: 26px;
+	border: none;
+	border-radius: 6px;
+}

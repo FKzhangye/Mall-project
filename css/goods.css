@@ -1,0 +1,23 @@
+.img{
+  width: 500px;
+  float: left;
+}
+.right{
+  float: right;
+  width: 400px;
+  margin: 50px 50px 0 0;
+  text-align: center;  
+  
+}
+.name{
+  padding-top: 30px;
+  font-size: 20px;
+}
+.button input{
+  border-style: none;
+  font-size: 16px;
+  padding: 10px;
+  background: orange;
+  color: white;
+  border-radius: 5px;
+}

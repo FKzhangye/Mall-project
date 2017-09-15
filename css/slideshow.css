@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  width: 1065px;
+  height: 450px;
+  margin: 10px auto;
+  /*border: 1px solid #333;*/
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.carousel .m_unit {
+  width: 8000px;
+  height: 450px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel ul {
+  list-style: none;
+}
+
+.carousel ul li {
+  float: left;
+  width: 1065px;
+  height: 450px;
+}
+.carousel ul li img{
+  width: 100%;
+  height: 100%;
+}
+.carousel:hover .btns{
+  display: block;
+}
+.btns{
+  display: none;
+}
+
+.btns a {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+  background-color: orange;
+  opacity: 0.7;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btns a:hover {
+  background-color: white;
+  color: orange;
+}
+.leftBtn,.rightBtn{
+  color: white;
+  line-height: 40px;
+  font-size: 18px;
+}
+.leftBtn {
+  left: 10px;
+}
+
+.rightBtn {
+  right: 10px;
+}
+
+.circles {
+  position: absolute;
+  width: 150px;
+  height: 16px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.circles ol {
+  list-style: none;
+}
+
+.circles ol li {
+  float: left;
+  width: 16px;
+  height: 16px;
+  background-color: orange;
+  opacity: 0.7;
+  margin-right: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.circles ol li.cur {
+  background-color: white;
+}
