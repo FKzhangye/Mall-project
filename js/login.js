@@ -13,17 +13,20 @@ var formState = false;
 oSubmit.disabled = true;
 
 oUsername.onblur = function(){
-	if(!/^\w{3,16}$/.test(this.value)){
+	nameState = /^\w{3,16}$/.test(this.value);
+	if(!nameState){
 		oUser.style.display = "block";
 	}
+	checkFormState();
 }
 oVerify.onblur = function(){
-	if(! /^\w{6,16}$/.test(this.value)){
+	passState =  /^\w{6,16}$/.test(this.value);
+	if(!passState){
 		oVer.style.display = "block";
-	}else{
-		ajaxVerify();
 	}
+	checkFormState();
 }
+
 
 function checkFormState(){
 	formState = nameState && passState;
@@ -31,6 +34,9 @@ function checkFormState(){
 }
 
 
+oSubmit.onclick = function(){
+	ajaxVerify();
+}
 function ajaxVerify() {
 	//js校验
 	//直接调用登录的接口
@@ -45,20 +51,17 @@ function ajaxVerify() {
 		localStorage.username = json.data.username;
  		
  		console.log(json.message);
- 		toast(json.message,2000);
+ 		toast(json.message,1000);
 		
 		if(json.message === "登录成功"){
-			nameState = true;
-			passState = true;
-			checkFormState()
-		}
-		//如果localstorage里面有backurl,我们就跳过去, 否则跳回首页
-		oSubmit.onclick = function() {
-			if(localStorage.backurl) {
-				location.href = localStorage.backurl;
-			} else {
-				location.href = 'index.html';
-			}
+			var timer = setInterval(function(){
+				//如果localstorage里面有backurl,我们就跳过去, 否则跳回首页
+				if(localStorage.backurl) {
+					location.href = localStorage.backurl;
+				} else {
+					location.href = 'index.html';
+				}
+			},1000);
 		}
 	});
 }

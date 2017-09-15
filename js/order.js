@@ -6,7 +6,7 @@ myajax.get('http://h6.duchengjiu.top/shop/api_order.php', {
   console.log(json);
   var data = json.data;
   if(data.length === 0) {
-    oOrder.innerHTML = "<h3>您的订单为空</h3>";
+    oOrder.innerHTML = "<h3 class='h3'>您的订单为空</h3>";
     return;
   }
   for(var i = 0; i < data.length; i++) {

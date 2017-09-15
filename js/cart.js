@@ -113,3 +113,5 @@ function getSum() {
   localStorage.sum = sum;
   oSum.innerText = "￥" + sum + "元";
 }
+
+

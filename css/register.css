@@ -30,7 +30,7 @@
 }
 
 .sign11 input,.password input,.verification input{
-	width: 197px;
+  width: 197px;
   height: 25px;
   font-size: 18px;
   line-height: 25px;
@@ -54,7 +54,7 @@
   height: 20px;
   line-height: 20px;
   font-size: 16px;
-  color: whitesmoke;
+  color: red;
   display: none;
   text-align: center;
   float: left;
@@ -93,4 +93,21 @@
 	color: green;
 	float: left;
 	margin: 8px;
+}
+#login{
+  width: 299px;
+  height: 20px;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 10px 36px;
+  color: black;
+  text-align: right;
+}
+#login a{
+	text-decoration: none;
+	color: red;
+}
+#login a:hover{
+	text-decoration: underline;
+	color: red;
 }

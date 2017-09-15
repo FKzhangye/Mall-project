@@ -114,6 +114,9 @@ oOrder.onclick = function() {
 		if(json.code === 0) {
 			toast('下订单成功');
 //			location.href = 'order.html';
+			var timer = setInterval(function(){
+				window.location.href = "order.html";
+			},1000);
 		}
 	});
 }

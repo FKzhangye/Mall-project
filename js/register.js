@@ -17,28 +17,34 @@ var passwordState = false;
 oSubmit.disabled = true;
 
 oName.onblur = function() {
-	if(!/^\w{3,16}$/.test(this.value)) {
+	nameState = /^\w{3,16}$/.test(this.value);
+	if(!nameState) {
 		oUser.style.display = "block";
 	}
+	checkFormState()
 }
 oPass.onblur = function() {
-	if(!/^\w{6,16}$/.test(this.value)) {
+	passState = /^\w{6,16}$/.test(this.value);
+	if(!passState) {
 		oPass1.style.display = "block";
 	}
+	checkFormState()
 }
 oPassword.onblur = function() {
 	passwordState = (oPassword.value === oPass.value);
 	if(!passwordState) {
 		oVerify.style.display = "block";
-	} else {
-		ajaxVerify();
-	}
-
+	} 
+	checkFormState()
 }
 
 function checkFormState() {
 	formState = nameState && passState && passwordState;
 	oSubmit.disabled = !formState;
+}
+
+oSubmit.onclick = function(){
+	ajaxVerify();
 }
 
 function ajaxVerify() {
@@ -48,18 +54,11 @@ function ajaxVerify() {
 		password: oPass.value
 	}, function(err, responseText) {
 		var json = JSON.parse(responseText);
-		toast(json.message,2000);
+		toast(json.message,1000);
 		if(json.message === "注册成功") {
-			nameState = true;
-			passState = true;
-			checkFormState()
-		}
-		oSubmit.onclick = function() {
-			if(localStorage.backurl) {
-				location.href = localStorage.backurl;
-			} else {
+			var timer = setInterval(function(){
 				location.href = 'login.html';
-			}
+			},1000);
 		}
 	});
 }

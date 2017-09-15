@@ -1,7 +1,7 @@
 var oCats = document.querySelector('#cats');
     	cat_id = getQueryString("cat_id");
     	myajax.get('http://h6.duchengjiu.top/shop/api_goods.php?cat_id='+cat_id,
-				{}, 
+				{},
 				function(error, responseText){
 		        var json = JSON.parse(responseText);//返回的整个json对象
 		        var data = json.data;//json对象当中的data是一个数组

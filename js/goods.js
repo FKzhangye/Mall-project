@@ -1,5 +1,9 @@
 var oGoods = document.querySelector('#hot-goods');
-myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {}, function(error, responseText) {
+myajax.get('http://h6.duchengjiu.top/shop/api_goods.php',
+{
+	pagesize:'200'
+},
+function(error, responseText) {
   var json = JSON.parse(responseText);
   console.log(json);
   var data = json.data;
