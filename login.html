@@ -27,15 +27,17 @@
           <a href="javascript:localStorage.clear(); location.reload();" class="logout">退出</a>
 
           <a href="register.html" name="register" class="register">注册</a>
+					<a class="shopping-cart">购物车</a>
+					<a class="my-order">我的订单</a>
+					<a href="index.html">返回首頁</a>
+				</div>
+			</div>
+		</div>
 
-          <a href="cart.html">购物车</a>
+		<!--ajax token的验证，购物车，我的订单-->
+		<script type="text/javascript" src="js/toast.js"></script>
+		<script type="text/javascript" src="js/token.js"></script>
 
-          <a href="order.html">我的订单</a>
-          <a href="index.html">返回首頁</a>
-          
-        </div>
-      </div>
-    </div>
     <script type="text/javascript">
       if(localStorage.username){
         var oUsername = document.querySelector('a[name=username]');
@@ -98,9 +100,10 @@
 					</label>
 				</div>
 			  	<input type="button" name="button" id="button" value="立即登录"/>
-			  	<div id="login">未注册，先去<a href="register.html">注册</a></div>
+			  	<div id="login">没有账号？免费
+			  		<a href="register.html">注册</a>
+			  	</div>
 			  	<!--登录-->
-			  	<script type="text/javascript" src="js/toast.js"></script>
 					<script type="text/javascript" src = "js/login.js"></script>
 			</div>
     </div>

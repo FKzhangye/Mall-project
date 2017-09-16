@@ -56,7 +56,7 @@ body {
   width: 1065px;
   height: 50px;
   margin: auto;
-	background-image: linear-gradient(to top,#fc871f,#fcd6b5);
+	background:#ddd;
   z-index: 99999;
 }
 
@@ -75,7 +75,7 @@ body {
   text-decoration: none;
   color: white;
   padding: 5px;
-	background-image: linear-gradient(to top,#fc871f,#fcd6b5);
+	background:#FEE3EC;
   border-radius: 5px;
 }
 
